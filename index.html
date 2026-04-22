@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Paginação</title>
+
+<style>
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container da paginação */
+.paginacao {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+/* Lista */
+.paginacao ul {
+    list-style: none;
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Itens */
+.paginacao ul li {
+    border-right: 1px solid #ccc;
+}
+
+/* Remove borda do último */
+.paginacao ul li:last-child {
+    border-right: none;
+}
+
+/* Links */
+.paginacao ul li a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #007bff;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* Hover */
+.paginacao ul li a:hover {
+    background-color: #e9ecef;
+}
+
+/* Página ativa */
+.paginacao ul li.ativo a {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Combinador (exemplo: só o primeiro item) */
+.paginacao ul li:first-child a {
+    font-weight: bold;
+}
+
+/* Combinador descendente */
+.paginacao ul li a span {
+    font-size: 14px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="paginacao">
+    <ul>
+        <li><a href="#">«</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">»</a></li>
+    </ul>
+</div>
+
+</body>
+</html>
